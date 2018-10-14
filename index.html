@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>coffee</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+	<div class="preloading">
+		<img src="img/preloader.gif" alt="">
+	</div>
+	<!--  end of preloading -->
+	<header class="header" id="header">
+		<div class="logo">
+			<h1 class="logo-name">Coffee Junkie</h1>
+
+			<div class="social-media">
+				<a href="#" class="social-icon">
+					<i class="fab fa-facebook fa-fw"></i>
+				</a>
+				<a href="#" class="social-icon">
+					<i class="fab fa-twitter fa-fw"></i>
+				</a>
+				<a href="#" class="social-icon">
+					<i class="fab fa-google-plus fa-fw"></i>
+				</a>
+				<a href="#" class="social-icon">
+					<i class="fab fa-instagram fa-fw"></i>
+				</a>
+			</div>	
+		</div>
+		<!-- end of logo -->
+		<div class="video-container">
+			<video class='video-item' autoplay muted loop>
+				<source src="video/coffee.mp4">
+				<source src="video/coffee.ogv">
+				<source src="video/coffee.webm">
+				your browser does not support video tag
+			</video>
+		</div>
+		<!-- end of video container -->
+
+		<div class="navBar">
+			<ul>
+				<li><a href="#" class="nav-logo"><img src="img/navLogo.svg" alt=""></a></li>
+				<li><a href="#header">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#drink">Free Drink</a></li>
+				<li><a href="#work">Work</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>	
+		</div>
+		<!-- end of navBar -->
+
+		<div class="navBtn">
+			<i class="fas fa-bars"></i>
+		</div>
+		<!-- end of navBtn -->
+		
+		<div class="video-switch-container">
+			<div class="video-switch">
+				<span>on</span>
+				<span>off</span>
+				<div class="video-switch-btn"></div>
+			</div>
+		</div>
+
+	</header>
+	<!-- end of header -->
+
+	<div class="about section-padding" id="about">
+		<div class="main-container">
+			<div class="about-container">
+				<div class="about-row clearfix">
+					<div class="col-6 section-display">
+						<div class="section-title">
+							<h1>Our story</h1>
+							<div class="section-title-underline"></div>
+							<p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio molestias velit laboriosam suscipit labore! Tenetur est iure ullam voluptas nihil eligendi animi enim, nobis quam.</p>
+						</div>
+					</div>
+
+					<div class="col-6 section-display">
+						<div class="section-img">
+							<img src="img/aboutImg-1.jpeg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="about-container">
+				<div class="about-row clearfix">
+
+					<div class="col-6 section-display">
+						<div class="section-img">
+							<img src="img/aboutImg-2.jpeg" alt="">
+						</div>
+					</div>
+
+					<div class="col-6 section-display about-special">
+						<div class="section-title">
+							<h1>What we do</h1>
+							<div class="section-title-underline"></div>
+							<p class="section-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio molestias velit laboriosam suscipit labore! Tenetur est iure ullam voluptas nihil eligendi animi enim, nobis quam.</p>
+						</div>
+					</div>
+
+				</div>
+			</div>	
+		</div>
+	</div>
+	<!-- end of about -->
+
+	<section class="drink section-padding" id="drink">
+		<div class="main-container">
+			<form class="drink-form">
+				<p class="drink-form-feedback">some text</p>
+				<h3 class="drink-form-title">to get free drinks</h3>
+				<div class="drink-form-input">
+					<input type="text" maxlength="15" class="input-name" placeholder="name">
+					
+				</div>
+				<div class="drink-form-input">
+					<input type="text" maxlength="15" class="input-lastname" placeholder="last name">
+				</div>
+				<div class="drink-form-input">
+					<input type="email" class="input-email" placeholder="email">
+				</div>
+				<div class="drink-form-input">
+					<input type="submit" value="sing up" class="input-submit">
+				</div>
+			</form>
+
+			<article class="drink-card">
+				<h3 class="drink-card-title">lucky people:</h3>
+				<div class="drink-card-list clearfix">
+					<div class="person">
+						<img src="img/person-1.jpeg" alt="" class="person-thumbnail">
+						<h4 class="person-name">John</h4>
+						<h4 class="person-lastname">Wu</h4>
+					</div>
+
+					<div class="person">
+						<img src="img/person-1.jpeg" alt="" class="person-thumbnail">
+						<h4 class="person-name">John</h4>
+						<h4 class="person-lastname">Wu</h4>
+					</div>
+
+				</div>
+			</article>
+		</div>
+	</section>
+	<!-- end of free drink -->
+
+	<section class="work section-padding" id="work">
+		<div class="section-title">
+			<h1>our work</h1>
+			<div class="section-title-underline"></div>
+		</div>
+		
+		<div class="work-container">
+
+			<div class="work-item item-1">		
+				<img src="img/work-1.jpeg" class="work-item-img" alt="">
+				<a href="#" class="work-item-icon" data-id='1'>
+					<i class="fas fa-search"></i>
+				</a>
+			</div>
+
+			<div class="work-item item-2">		
+				<img src="img/work-2.jpeg" class="work-item-img" alt="">
+				<a href="#" class="work-item-icon" data-id='2'>
+					<i class="fas fa-search"></i>
+				</a>
+			</div>
+
+			<div class="work-item item-3">		
+				<img src="img/work-3.jpeg" class="work-item-img" alt="">
+				<a href="#" class="work-item-icon" data-id='3'>
+					<i class="fas fa-search"></i>
+				</a>
+			</div>
+
+			<div class="work-item item-4">		
+				<img src="img/work-4.jpeg" class="work-item-img" alt="">
+				<a href="#" class="work-item-icon" data-id='4'>
+					<i class="fas fa-search"></i>
+				</a>
+			</div>
+
+			<div class="work-item item-5">		
+				<img src="img/work-5.jpeg" class="work-item-img" alt="">
+				<a href="#" class="work-item-icon" data-id='5'>
+					<i class="fas fa-search"></i>
+				</a>
+			</div>
+
+			<div class="work-item item-6">		
+				<img src="img/work-6.jpeg" class="work-item-img" alt="">
+				<a href="#" class="work-item-icon" data-id='6'>
+					<i class="fas fa-search"></i>
+				</a>
+			</div>
+
+			<div class="work-item item-7">		
+				<img src="img/work-7.jpeg" class="work-item-img" alt="">
+				<a href="#" class="work-item-icon" data-id='7'>
+					<i class="fas fa-search"></i>
+				</a>
+			</div>
+
+			<div class="work-item item-8">		
+				<img src="img/work-8.jpeg" class="work-item-img" alt="">
+				<a href="#" class="work-item-icon" data-id='8'>
+					<i class="fas fa-search"></i>
+				</a>
+			</div>
+
+			<div class="work-item item-9">		
+				<img src="img/work-9.jpeg" class="work-item-img" alt="">
+				<a href="#" class="work-item-icon" data-id='9'>
+					<i class="fas fa-search"></i>
+				</a>
+			</div>
+		</div>
+		
+		<div class="work-modal">
+				<div class="work-modal-item"></div>
+				<div class="work-modal-close">
+					<i class="fas fa-window-close"></i>
+				</div>
+		</div>
+	</section>
+	<!-- end of work -->
+
+	<section class="contact section-padding" id="contact">
+		<div class="contact-container">
+			<iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.1741124463774!2d120.2996449142495!3d22.609972485163524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0c995f8dcfb3%3A0x62d29ce2a4f9e568!2z6auY6ZuE5biC56uL5ZyW5pu46aSo57i96aSo!5e0!3m2!1szh-TW!2stw!4v1538721280851" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+			<div class="contact-info">
+				<div class="contact-item">
+					<div class="contact-item-icon">
+						<i class="fas fa-map-pin"></i>
+					</div>
+					<h2 class="contact-item-title">address</h2>
+					<p class="contact-item-text">高雄市前鎮區新光路</p>
+				</div>
+				<div class="contact-item">
+					<div class="contact-item-icon">
+						<i class="fas fa-headphones-alt"></i>
+					</div>
+					<h2 class="contact-item-title">support</h2>
+					<p class="contact-item-text">
+						<span>
+							<i class="fas fa-phone"></i>
+						</span>
+						+123 456 789
+					</p>
+					<p class="contact-item-text">
+						<span>
+							<i class="fas fa-envelope"></i>
+						</span>
+						email@email.com
+					</p>
+				</div>
+				<div class="contact-item">
+					<div class="contact-item-icon">
+						<i class="fas fa-clock"></i>
+					</div>
+					<h2 class="contact-item-title">work time</h2>
+					<p class="contact-item-text">monday - friday 8.00am - 20.00pm</p>
+					<p class="contact-item-text">saturdya - sunday 9.00am - 22.00pm</p>
+				</div>				
+			</div>
+		</div>
+
+	</section>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
