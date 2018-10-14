@@ -1,0 +1,451 @@
+$brightYellow: #e3b505
+$darkBrown: #bb9457
+$colorYellow: #f2b450
+$colorBrown: #382923
+$colorBlack: #191919
+$colorGrey: #a9b2ac
+
+/* global */
+a
+	text-decoration: none
+
+body
+	background: linear-gradient(rgba(white,0.85),(rgba(white,0.85))),url('../img/bodyBcg.jpeg')
+
+ul,li
+	padding: 0
+	margin: 0
+	list-style: none
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+.clearfix:after
+	display: table
+	content: ''
+	clear: both
+
+.section-padding
+	padding: 3rem 0
+
+.section-title-underline
+	width: 5rem
+	background: $colorYellow
+	height: 0.25rem
+	margin-top: 1rem
+.section-text
+	letter-spacing: 0.1rem
+	line-height: 1.5
+	margin-top: 1rem
+	color: $colorGrey
+
+
+/* preloading */
+.preloading
+	position: fixed
+	left: 0
+	top: 0
+	bottom: 0
+	right: 0
+	z-index: 10
+	width: 100%
+	height: 100%
+	background: $brightYellow
+	display: flex
+	justify-content: center
+	align-items: center
+
+/* header */
+header.header
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	height: 100vh
+	position: relative
+	.logo
+		z-index: 3
+		text-align: center
+	.logo-name
+		font-size: 9rem
+		color: $brightYellow
+	.social-icon
+		display: inline-block
+		padding: 0.25rem
+		border: 0.1rem solid $colorBlack
+		border-radius: 50%
+		color: $colorBlack
+		margin: 0 5px
+		transition: all 0.5s
+		&:hover
+			background: $brightYellow
+	.video-container
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		z-index: -1
+		.video-item
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.navBar
+		position: fixed
+		top: 0
+		left: 0
+		background: $colorYellow
+		width: 0
+		height: 100%
+		overflow: hidden
+		transition: all 0.5s linear
+		a
+			display: block
+			font-size: 1.5rem
+			padding: 0.5rem 1rem
+			color: $colorBrown
+			&:hover
+				background: $colorBrown
+				color: $colorYellow
+				padding-left: 1.5rem
+		.nav-logo:hover
+			background: $colorGrey
+	.nav-show
+		width: 10rem
+	.navBtn
+		position: fixed
+		top: 5%
+		right: 5%
+		font-size: 3.5rem
+		color: $brightYellow
+		cursor: pointer
+		animation: movingNav 2s infinite
+
+.video-switch-container
+	display: none
+
+@media (max-width:768px)
+	header.header
+		background: url('../img/headerBcg.jpeg')center/cover fixed no-repeat
+
+		.logo-name
+			font-size: 4rem
+			color: $colorYellow
+
+@media (min-width:768px)
+	.video-switch-container
+		display: block
+		position: absolute
+		right: 5%
+		bottom: 5%
+		.video-switch
+			background: $colorYellow
+			width: 5rem
+			border-radius: 0.25rem
+			padding: 0.25rem
+			display: flex
+			justify-content: space-between
+			text-transform: uppercase
+		
+		.video-switch-btn
+			position: absolute
+			top: 0
+			left: 0
+			background: $colorBrown
+			width: 50%
+			height: 100%
+			border-radius: 0.5rem
+		.btnSlide
+			left: 50%
+
+@keyframes movingNav
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(1.5)
+	100%
+		transform: scale(1)
+
+/* end of header */
+
+
+/* about */
+.about
+	margin-top: 4rem
+	.about-container
+		padding: 0 2rem 1rem 2rem
+	.section-img
+		img
+			width: 100%
+			height: 100%
+			border-radius: 0.25rem
+	.section-display
+		width: 50%
+		float: left
+		& + .section-display
+			padding-left: 4rem
+
+@media (max-width:768px)
+	.about
+		.main-container
+			max-width: 90vh
+			margin: 0 auto
+		.about-row
+			display: flex
+			flex-direction: column
+			> div
+				margin-bottom: 1rem
+		.section-display
+			width: 100%
+			float: none
+			& + .section-display
+				padding: 0
+		.about-special
+			order: -1
+
+
+/* end of about */
+
+/* drink */
+.drink
+	background: $colorBrown
+	color: $brightYellow
+	text-transform: capitalize
+	.main-container
+		text-align: center
+	.drink-form-feedback
+		border: 0.1rem solid $colorYellow
+		padding: 0.5rem
+		font-size: 1.5rem
+		width: 60%
+		margin: 0 auto
+		display: none
+		border-radius: 0.5rem
+	.error
+		display: block
+		color: red
+		border-color: red
+
+	.success
+		display: block
+		color: green
+		border-color: green
+	.drink-form > *
+		margin-bottom: 1rem
+	.drink-form-title,.drink-card-title
+		font-size: 3rem
+	.input-name,.input-lastname,.input-email,.input-submit
+		width: 60%
+		font-size: 1rem
+		border-radius: 0.5rem
+		padding: 0.25rem 0.5rem
+		background: rgba(111,87,77,0.6)
+		color: $darkBrown
+		border: none
+		outline: none
+		margin-bottom: 1rem
+
+		&::placeholder
+			color: $darkBrown
+			text-transform: capitalize
+	.input-submit
+		background: $colorYellow
+		color: $colorBlack
+		transition: all 0.5s linear
+		cursor: pointer
+		text-transform: uppercase
+		&:hover
+			opacity: 0.8
+
+	.drink-card-title
+		margin-bottom: 1rem
+
+
+	.person
+		float: left
+		display: inline-block
+		width: 45%
+		font-size: 1.5rem
+		border: 0.1rem solid rgba(111,87,77,0.6)
+		border-radius: 0.5rem
+		text-align: left
+		padding: 1rem
+		margin: 0 1rem
+		margin-bottom: 1rem
+		.person-name,.person-lastname
+			display: inline-block
+			line-height: 50px
+			vertical-align: top
+
+@media (max-width: 768px)
+	.drink 
+		.person
+			float: none
+			width: 60%
+			margin: 0 auto
+			margin-bottom: 1rem
+
+/* end of drink */
+
+/* work section */
+.work
+	.section-title
+		font-size: 3rem
+		text-align: center
+		text-transform: capitalize
+	.section-title-underline
+		margin: 1rem auto 0 auto
+.work-container
+	max-width: 90vw
+	margin: 2rem auto
+
+	.work-item-img
+		width: 100%
+		height: 100%
+		display: block
+		transition: all 1s linear
+
+	.work-item
+		background: linear-gradient($colorYellow,$colorYellow)
+		overflow: hidden
+		position: relative
+	.work-item:hover .work-item-img
+		opacity: 0.5
+		transform: scale(1.2)
+	.work-item-icon
+		position: absolute;
+		color: $brightYellow;
+		top: 50%;
+		left: 50%;
+		display: inline-block;
+		font-size: 4rem;
+		text-decoration: none;
+		transition: all 0.5s ease;
+		transform: scale(0);
+	.work-item:hover .work-item-icon
+		transform: scale(1.3) translate(-50%,-50%)
+		
+
+	.work-item-icon:hover
+		color: $colorBrown
+		cursor: pointer
+
+@media (min-width: 576px)
+	.work-container
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-gap: 1rem
+
+@media (min-width: 992px)
+	.work-container
+		height: 100vh
+		grid-template-columns: repeat(4,1fr)
+		grid-template-rows: repeat(4,1fr)
+		grid-template-areas: 'one one two three''one one four four''five six seven seven''eight nine seven seven'
+
+	.item-1
+		grid-area: one
+	.item-2
+		grid-area: two
+	.item-3
+		grid-area: three
+	.item-4
+		grid-area: four
+	.item-5
+		grid-area: five
+	.item-6
+		grid-area: six
+	.item-7
+		grid-area: seven
+	.item-8
+		grid-area: eight
+	.item-9
+		grid-area: nine
+
+/* end of work section */
+
+/* modal */
+.work-modal
+	display: none
+
+.work-modal-show
+	position: fixed
+	background: rgba(0,0,0,0.5)
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	z-index: 999
+	display: grid
+	justify-content: center
+	align-items: center
+.work-modal-item
+	background: url('../img/work-1.jpeg')center/cover
+	height: 70vh
+	width: 80vw
+	border: 0.5rem solid $colorYellow
+	border-radius: 0.4rem
+
+@media (min-width: 768px)
+	.work-modal-item
+		height: 80vh
+		width: 60vw
+  
+.work-modal-close
+	position: fixed
+	font-size: 3rem
+	color: $brightYellow
+	bottom: 5%
+	right: 5%
+	transition: all 0.5s linear
+	cursor: pointer
+	&:hover
+		color: red
+
+/* end of modal section */
+
+/* contact section */
+.contact-container
+	max-width: 90vw
+	margin: 0 auto
+	display: grid
+	grid-row-gap: 1rem
+
+	.contact-info
+		display: grid
+		justify-content: center
+
+	.contact-item
+		margin: 1rem 0
+		padding: 0.5rem
+
+	.contact-item-icon
+		font-size: 3rem
+		color: $colorYellow
+	
+	.contact-item-title
+		text-transform: uppercase
+		margin: 0.5rem 0
+		letter-spacing: 0.25rem
+		font-style: italic
+
+	.contact-item-text
+		font-size: 1rem
+		text-transform: uppercase
+		color: $colorGrey
+
+@media (min-width: 768px)
+	.contact-info
+		grid-template-columns: repeat(3,1fr)
+		order: -1
+
+@media (min-width: 992px)
+	.contact-info
+		grid-template-columns: 1fr
+		order: 0
+	.contact-container
+		display: grid
+		grid-template-columns: 2fr 1fr
+		grid-column-gap: 2rem
